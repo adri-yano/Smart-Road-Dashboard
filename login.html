@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="center-page">
+
+<div class="login-box">
+
+  <h1>Smart Road System</h1>
+  <p>Welcome to the Smart Road Dashboard</p>
+<div id="arrow">
+    <button id="backBtn" class="back-arrow" onclick="history.back()" aria-label="Go back">
+        ←
+    </button>
+
+</div>
+  <!-- Buttons -->
+  <div id="buttons">
+    <button onclick="showLogin()">Login</button>
+    <button onclick="showSignup()">Signup</button>
+  </div>
+ <div class="form-container">
+        <h2>Login</h2>
+  <!-- LOGIN FORM -->
+  <div id="loginForm" style="display:none;">
+    <input id="loginUser" placeholder="Username">
+    <input id="loginPass" type="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+  </div>
+
+  <!-- SIGNUP FORM -->
+  <div id="signupForm" style="display:none;">
+    <input id="signupUser" placeholder="New Username">
+    <input id="signupPass" type="password" placeholder="New Password">
+    <button onclick="signup()">Signup</button>
+  </div>
+  <p id="msg"></p>
+
+</div>
+
+<script src="js/auth.js"></script>
+
+</body>
+</html>
