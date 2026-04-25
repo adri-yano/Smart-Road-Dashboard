@@ -1,15 +1,18 @@
 function showLogin() {
   document.getElementById("loginForm").style.display = "block";
   document.getElementById("signupForm").style.display = "none";
+
   document.getElementById("buttons").style.display = "none";
+  document.getElementById("backArrow").style.display = "block";
 }
 
 function showSignup() {
   document.getElementById("loginForm").style.display = "none";
   document.getElementById("signupForm").style.display = "block";
-  document.getElementById("buttons").style.display = "none";
-}
 
+  document.getElementById("buttons").style.display = "none";
+  document.getElementById("backArrow").style.display = "block";
+}
 // SIGNUP
 function signup() {
   let user = document.getElementById("signupUser").value;
@@ -40,6 +43,10 @@ function login() {
   }
 }
 //back
-document.getElementById('backBtn').addEventListener('click', () => {
-    window.history.back();
-});
+function goBack() {
+  document.getElementById("loginForm").style.display = "none";
+  document.getElementById("signupForm").style.display = "none";
+
+  document.getElementById("buttons").style.display = "block";
+  document.getElementById("backArrow").style.display = "none";
+}
