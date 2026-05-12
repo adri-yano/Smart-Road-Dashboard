@@ -176,12 +176,12 @@ setInterval(() => {
   }
 
   // Auto irrigation
-  if (waterLevel > 60) {
+  if (waterLevel > 80) {
     irrigationOn = true;
   }
 
   // Auto cleaning (random realistic behavior)
-  if (waterLevel > 70 && Math.random() > 0.8) {
+  if (waterLevel > 90 && Math.random() > 0.8) {
     cleaningOn = true;
   }
 

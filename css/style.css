@@ -187,7 +187,6 @@ h1 {
 .box:hover {
   transform: scale(1.02);
 }
-
 /* ===== BUTTONS ===== */
 button {
   padding: 10px;
@@ -324,4 +323,49 @@ button:hover {
 
 #backArrow:hover {
   color: #10b981;
+}
+/* LOGIN BACKGROUND */
+.login-bg {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+  url('../assets/Plant.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Center properly */
+.center-page, .login-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Improve login box */
+.login-box {
+  background: rgba(255,255,255,0.9);
+  color: #065f46;
+  padding: 30px;
+  border-radius: 15px;
+  width: 320px;
+  text-align: center;
+}
+
+/* Inputs vertical */
+.login-box input {
+  width: 100%;
+  display: block;
+  margin: 10px 0;
+}
+/* Clickable image hover effect */
+.clickable-img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.clickable-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
