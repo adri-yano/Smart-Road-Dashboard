@@ -1,89 +1,93 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html>
 <head>
-  <title>Smart Road Dashboard</title>
+  <title>Welcome</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
-<body>
- <!--<nav class="navbar">
-  <a href="index.html">Dashboard</a>
-  <a href="analytics.html">Analytics</a>
-  <a href="calculator.html">Calculator</a>
-  <a href="schedule.html">Schedule</a>
-  <a href="settings.html">Settings</a>
-  <a href="about.html">About</a>
-</nav>-->
-<nav class="navbar">
-  <a href="index.html"><i class="fa-solid fa-house"></i> Dashboard</a>
-  <a href="analytics.html"><i class="fa-solid fa-chart-simple"></i> Analytics</a>
-  <a href="calculator.html"><i class="fa-solid fa-calculator"></i> Calculator</a>
-  <a href="schedule.html"><i class="fa-solid fa-clock"></i> Schedule</a>
-  <a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
-  <a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a>
-</nav>
+<body class="center-page">
 
-<h1>🌱 Smart Road System Dashboard</h1>
-<p class="subtitle">Simulation of Rainwater-Based Cleaning and Irrigation System</p>
+<div class="login-box">
 
-<div class="container">
-
-  <div class="box">
-    <h2><i class="fa-solid fa-cloud-rain"></i> Rain System</h2>
-    <button onclick="toggleRain()">Toggle Rain</button>
-    <p id="rainStatus" class="status-off">Rain: OFF</p>
+  <h1>Smart Road System</h1>
+  <p>Welcome to the Smart Road Dashboard</p>
+<!--<div id="arrow">
+    <button id="backBtn" class="back-arrow" onclick="history.back()" aria-label="Go back">
+        ←
+    </button>
+<div id="backArrow" onclick="goBack()" style="display:none; cursor:pointer;">
+  <i class="fa-solid fa-arrow-left"></i> Back
+</div>
+</div>
+  <div id="buttons">
+    <button onclick="showLogin()">Login</button>
+    <button onclick="showSignup()">Signup</button>
+  </div>
+  <div id="loginForm" style="display:none;">
+    <input id="loginUser" placeholder="Username">
+    <input id="loginPass" type="password" placeholder="Password">
+    <button onclick="login()">Login</button>
   </div>
 
-  <div class="box">
-   <h2><i class="fa-solid fa-water"></i> Water Level</h2>
-    <div class="bar-container">
-      <div id="waterBar" class="bar"></div>
-    </div>
-    <p id="waterValue">50%</p>
+  <div id="signupForm" style="display:none;">
+    <input id="signupUser" placeholder="New Username">
+    <input id="signupPass" type="password" placeholder="New Password">
+    <button onclick="signup()">Signup</button>
   </div>
-
-  <div class="box">
-   <h2><i class="fa-solid fa-gears"></i> System Control Panel</h2>
-    <button onclick="startCleaning()">Start Cleaning</button>
-    <button onclick="startIrrigation()">Start Irrigation</button>
-    <button onclick="resetSystem()">Reset</button>
-  </div>
-
-  <div class="box">
-    <h2><i class="fa-solid fa-chart-line"></i> Status</h2>
-    <p id="cleaning" class="status-off">Cleaning: OFF</p>
-    <p id="irrigation" class="status-off">Irrigation: OFF</p>
-  </div>
-
-  <div class="box">
-   <h2><i class="fa-solid fa-circle-info"></i> System Info</h2>
-    <p id="systemInfo">System running normally</p>
-  </div>
+  <p id="msg"></p>
 
 </div>
 
-<script src="js/script.js"></script>
+<script src="js/auth.js"></script>
+
 </body>
-<footer class="footer">
-  <h3>Contact Us</h3>
+</html>
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Road System</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
 
-  <p>
-    <i class="fa-solid fa-envelope"></i> adriyanogirma7@gmail.com
-  </p>
+<body class="login-bg">
 
-  <p>
-    <i class="fa-solid fa-phone"></i> +251-984-7189-88
-  </p>
+<div class="login-box">
 
-  <p>
-    <i class="fa-brands fa-telegram"></i> @acromatic_16
-  </p>
-  <p>
-  <i class="fa-brands fa-linkedin"></i>
-  <a href="blank" target="_blank">
-    Adriyano Girma
-  </a>
-</p>
-</footer>
+  <h1>🌱 Smart Road System</h1>
+  <p class="subtitle">Clean Roads • Smart Water • Green Cities</p>
+
+  <!-- BACK BUTTON -->
+  <div id="backArrow" onclick="goBack()" style="display:none;">
+    <i class="fa-solid fa-arrow-left"></i> Back
+  </div>
+
+  <!-- BUTTONS -->
+  <div id="buttons">
+    <button onclick="showLogin()">Login</button>
+    <button onclick="showSignup()">Signup</button>
+  </div>
+
+  <!-- LOGIN -->
+  <div id="loginForm" style="display:none;">
+    <input id="loginUser" placeholder="Username">
+    <input id="loginPass" type="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+  </div>
+
+  <!-- SIGNUP -->
+  <div id="signupForm" style="display:none;">
+    <input id="signupUser" placeholder="New Username">
+    <input id="signupPass" type="password" placeholder="New Password">
+    <button onclick="signup()">Signup</button>
+  </div>
+
+  <p id="msg"></p>
+
+</div>
+
+<script src="js/auth.js"></script>
+</body>
 </html>
