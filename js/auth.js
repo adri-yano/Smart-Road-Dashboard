@@ -24,7 +24,7 @@ function signup() {
   document.getElementById("msg").innerText = "Signup successful! Redirecting...";
 
   setTimeout(() => {
-    window.location.href = "index.html";
+    window.location.href = "home.html";
   }, 1000);
 }
 
