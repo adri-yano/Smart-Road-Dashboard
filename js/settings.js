@@ -1,48 +1,49 @@
-/*function saveSettings() {
-  let min = document.getElementById("minWater").value;
-  let max = document.getElementById("maxWater").value;
-
-  localStorage.setItem("minWater", min);
-  localStorage.setItem("maxWater", max);
-
-  document.getElementById("out").innerText = "Settings saved!";
-}
-
+// Load saved settings when page opens
 window.onload = function () {
-  document.getElementById("minWater").value = localStorage.getItem("minWater") || "";
-  document.getElementById("maxWater").value = localStorage.getItem("maxWater") || "";
-};*/
-function saveSettings() {
-  let min = document.getElementById("minWater").value;
-  let max = document.getElementById("maxWater").value;
 
-  if (min === "" || max === "") {
-    document.getElementById("out").innerText = "Please fill all fields!";
+  let savedMin = localStorage.getItem("minWater");
+  let savedMax = localStorage.getItem("maxWater");
+
+  if (savedMin && savedMax) {
+
+    document.getElementById("out").innerHTML =
+      `
+      <strong>Saved Settings</strong><br>
+      Minimum Water Level: ${savedMin}%<br>
+      Maximum Water Level: ${savedMax}%
+      `;
+  }
+};
+
+// Save settings
+function saveSettings() {
+
+  let min = Number(document.getElementById("minWater").value);
+  let max = Number(document.getElementById("maxWater").value);
+
+  let output = document.getElementById("out");
+
+  // Validation
+  if (isNaN(min) || isNaN(max)) {
+    output.innerText = "Please fill all fields!";
     return;
   }
 
   if (min < 0 || max <= min) {
-    document.getElementById("out").innerText =
-      "Enter valid values (Max > Min, no negatives)";
+    output.innerText =
+      "Enter valid values (Max must be greater than Min)";
     return;
   }
 
-  // Save to localStorage
+  // SAVE TO LOCAL STORAGE
   localStorage.setItem("minWater", min);
   localStorage.setItem("maxWater", max);
 
-  // Display saved values
-  document.getElementById("out").innerText =
-    "Saved Settings → Min: " + min + "% | Max: " + max + "%";
+  // Show saved values
+  output.innerHTML =
+    `
+    <strong>Settings Saved Successfully</strong><br>
+    Minimum Water Level: ${min}%<br>
+    Maximum Water Level: ${max}%
+    `;
 }
-
-// Load saved values on page load
-window.onload = function () {
-  let min = localStorage.getItem("minWater");
-  let max = localStorage.getItem("maxWater");
-
-  if (min && max) {
-    document.getElementById("out").innerText =
-      "Saved Settings → Min: " + min + "% | Max: " + max + "%";
-  }
-};
