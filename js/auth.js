@@ -37,7 +37,7 @@ function login() {
   let savedPass = localStorage.getItem("pass");
 
   if (user === savedUser && pass === savedPass) {
-    window.location.href = "index.html";
+    window.location.href = "home.html";
   } else {
     document.getElementById("msg").innerText = "Invalid login!";
   }
